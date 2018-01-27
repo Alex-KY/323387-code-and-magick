@@ -181,6 +181,39 @@
   </div>
 </template>
 
+<script type="text/javascript">
+// Входные значения
+  var fireballSize = 22;
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
+
+// Направление ветра (Если true, то возвращаем скорость по ветру 5, если false - возвращаем скорость 2)
+  function getFireballSpeed(left) {
+    var a;
+    if (left === true) { 
+      a = 5;
+    } else {
+      a = 2;
+    }
+      return a;
+  }
+
+// Значение роста мага пропорционально ширине
+  function getWizardHeight() {
+    return 1.337*wizardWidth;
+  }
+
+// Чтобы маг находился по центру поля нужно взять половину ширины поля и вычесть половину ширины мага
+  function getWizardX(width) {
+    return (width*0.5)-wizardWidth*0.5;
+  }
+
+// Высота в данном случае обратная, поэтому нам нужна треть от высоты с вычетом роста мага
+  function getWizardY(height) {
+    return (height/3)-getWizardHeight();
+  }
+
+</script>
 <script src="js/game.js"></script>
 
 </body>
