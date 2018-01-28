@@ -189,13 +189,7 @@
 
 // Направление ветра (Если true, то возвращаем скорость по ветру 5, если false - возвращаем скорость 2)
   function getFireballSpeed(left) {
-    var a;
-    if (left === true) { 
-      a = 5;
-    } else {
-      a = 2;
-    }
-      return a;
+    return left ? 5 : 2;
   }
 
 // Значение роста мага пропорционально ширине
