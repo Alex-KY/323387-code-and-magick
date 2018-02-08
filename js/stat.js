@@ -29,7 +29,7 @@ var getMaxElement = function (arr) {
   return maxElement;
 };
 
-//Функция для выбора случайного цвета палитры rgb
+//  Функция для выбора случайного цвета палитры rgb
 var getRandomColor = function () {
   return (255 * (Math.random())).toFixed(0) + ', ' + (255 * (Math.random())).toFixed(0) + ', ' + (255 * (Math.random())).toFixed(0);
 };
@@ -61,8 +61,8 @@ window.renderStatistics = function (ctx, players, times) {
   ctx.strokeRect(CLOUD_X, CLOUD_Y, CLOUD_WIDTH, CLOUD_HEIGHT);
 
   ctx.font = '16px PT Mono';
-  ctx.fillText('Ура вы победили!', FIRST_STRING_X, FIRST_STRING_Y); 
-  ctx.fillText('Список результатов:', FIRST_STRING_X, FIRST_STRING_Y + GAP * 2); 
+  ctx.fillText('Ура вы победили!', FIRST_STRING_X, FIRST_STRING_Y);
+  ctx.fillText('Список результатов:', FIRST_STRING_X, FIRST_STRING_Y + GAP * 2);
 
   for (var i = 0; i < players.length; i++) {
 
